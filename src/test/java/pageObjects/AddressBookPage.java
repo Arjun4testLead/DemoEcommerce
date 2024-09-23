@@ -115,6 +115,7 @@ public class AddressBookPage {
 		addressTextBox2.sendKeys(addressText2);
 		citinameTextBox.sendKeys(cityNameText);
 		postcodeTextBox.sendKeys(postCodeText);
+		Thread.sleep(5000);
 		
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(countryDropdown));
@@ -122,12 +123,14 @@ public class AddressBookPage {
 		je.executeScript("arguments[0].scrollIntoView();", countryDropdown);
 		Select countrySelect = new Select(countryDropdown);
 		countrySelect.selectByVisibleText(countryNameText);
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(stateDropdown));
 		new Select(stateDropdown).selectByIndex(4);
 		Thread.sleep(5000);
+		
+		
 		
 		defaultAddressNo.click();
 		continueButton.click();

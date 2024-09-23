@@ -4,7 +4,6 @@
   <test name="Test">
     <classes>
       <class name="testCases.AddressbookPageTest"/>
-      <class name="testCases.RegisterPageTest"/>
       <class name="testCases.LoginPageTest"/>
     </classes>
   </test> <!-- Test -->
@@ -17,18 +16,12 @@
       </class> <!-- testCases.AddressbookPageTest -->
       <class name="testCases.LoginPageTest">
         <methods>
-          <include name="verifyLoginWithValidCredentials"/>
           <include name="verifyLoginWithvalidIdAndInvalidPassword"/>
           <include name="verifyLoginWithInvalidIdAndvalidPassword"/>
           <include name="verifyLoginWithInvalidIdAndInvalidPassword"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testCases.LoginPageTest -->
-      <class name="testCases.RegisterPageTest">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testCases.RegisterPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

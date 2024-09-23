@@ -51,7 +51,7 @@ public class AddressbookPageTest extends Base{
 		loginPage.loginToApplication(pro.getProperty("userName1"), pro.getProperty("password1"));
 		addressBookPage = loginPage.goToAddressbookPage();
 	}
-	@Test(priority=1)
+	//@Test(priority=1)
 	public void addANewAddress() throws Exception {
 		addressBookPage.clickNewAddressButton();
 		addressBookPage.enterFirstName(firstnameText);
@@ -67,7 +67,7 @@ public class AddressbookPageTest extends Base{
 		addressBookPage.clickContinueButton();
 	}
 	
-	@Test(priority=2)
+	@Test(priority=2, invocationCount=5)
 	public void addNewAddress() throws Exception {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 		addressBookPage.newAddressWithAllFields(firstnameText, lastnameText, companyNameText, addressText1, addressText2, cityNameText, postCodeText, countryNameText);

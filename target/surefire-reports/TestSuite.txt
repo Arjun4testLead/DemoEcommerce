@@ -1,13 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 56.05 s <<< FAILURE! - in TestSuite
-addNewAddress(testCases.AddressbookPageTest)  Time elapsed: 2.161 s  <<< FAILURE!
+Tests run: 9, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 150.955 s <<< FAILURE! - in TestSuite
+addNewAddress(testCases.AddressbookPageTest)  Time elapsed: 6.026 s  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
-Cannot locate option with text: Saint Helena
+Cannot locate option with text: Palestinian Territory
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
 Driver info: driver.version: unknown
 	at testCases.AddressbookPageTest.addNewAddress(AddressbookPageTest.java:73)
+
+verifyLoginWithInvalidIdAndInvalidPassword(testCases.LoginPageTest)  Time elapsed: 1.032 s  <<< FAILURE!
+java.lang.AssertionError: expected [Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.] but found [Warning: No match for E-Mail Address and/or Password.]
+	at testCases.LoginPageTest.verifyLoginWithInvalidIdAndInvalidPassword(LoginPageTest.java:47)
+
+verifyLoginWithInvalidIdAndvalidPassword(testCases.LoginPageTest)  Time elapsed: 0.95 s  <<< FAILURE!
+java.lang.AssertionError: expected [Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.] but found [Warning: No match for E-Mail Address and/or Password.]
+	at testCases.LoginPageTest.verifyLoginWithInvalidIdAndvalidPassword(LoginPageTest.java:41)
+
+verifyLoginWithvalidIdAndInvalidPassword(testCases.LoginPageTest)  Time elapsed: 1.118 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at testCases.LoginPageTest.verifyLoginWithvalidIdAndInvalidPassword(LoginPageTest.java:35)
 
